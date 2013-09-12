@@ -19,7 +19,7 @@ game.PlayerEntity = me.ObjectEntity.extend(
 		this.setVelocity(3, 15);
 	 
 		// adjust the bounding box
-		this.updateColRect(8,48, -1,0);
+//		this.updateColRect(8,48, -1,0);
 		
 		// set the display to follow our position on both axis
 		me.game.viewport.follow(this.pos, me.game.viewport.AXIS.BOTH);
