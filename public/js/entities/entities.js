@@ -41,7 +41,7 @@ game.PlayerEntity = me.ObjectEntity.extend(
 	  settings.spritewidth = 32;	
 		this.parent(x, y , settings);
 
-		this.setVelocity(3, 15);
+		this.setVelocity(4, 16);
 	 
 //		this.updateColRect(8,48, -1,0);
 		
