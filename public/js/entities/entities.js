@@ -6,6 +6,8 @@ game.TestEntity = me.ObjectEntity.extend(
 	
 	init:function (x, y, settings)
 	{
+	  settings.image = 'bodybuilder';
+	  settings.spritewidth = 32;	
 		this.parent(x, y , settings);
 	},
 
@@ -36,7 +38,7 @@ game.PlayerEntity = me.ObjectEntity.extend(
 	init:function (x, y, settings)
 	{
 		settings.image = 'emo';
-//		settings.spritewidth = 32;
+	  settings.spritewidth = 32;	
 		this.parent(x, y , settings);
 
 		this.setVelocity(3, 15);
