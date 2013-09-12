@@ -1,6 +1,3 @@
-/**
- * Player Entity
- */
 game.BodybuilderEntity = me.ObjectEntity.extend({	
 	
 	init:function (x, y, settings) {
@@ -57,17 +54,9 @@ game.DoggieEntity = me.ObjectEntity.extend({
 });
 
 
-/**
- * Player Entity
- */
 game.PlayerEntity = me.ObjectEntity.extend(
 {	
   
-  /* -----
-
-		constructor
-		
-	  ------			*/
 	
 	init:function (x, y, settings)
 	{

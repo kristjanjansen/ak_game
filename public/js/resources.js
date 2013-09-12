@@ -1,8 +1,5 @@
 game.resources = [
-	/**
-	 * Graphics.
-	 */
-	// our level tileset
+
 	{name: "tiles",  type:"image",	src: "data/img/map/tiles.png"},
 
 	{name: "emo", type:"image",	src: "data/img/sprite/emo.png"},
