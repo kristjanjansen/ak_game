@@ -1,26 +1,36 @@
 /**
  * Player Entity
  */
-game.TestEntity = me.ObjectEntity.extend(
-{	
+game.BodybuilderEntity = me.ObjectEntity.extend({	
 	
-	init:function (x, y, settings)
-	{
+	init:function (x, y, settings) {
 	  settings.image = 'bodybuilder';
 	  settings.spritewidth = 32;	
 		this.parent(x, y , settings);
 	},
 
-	update : function ()
-	{
-			
+	update : function () {			
 		this.parent();
 		return true;
-
 	}
 
 });
 
+
+game.DoggyEntity = me.ObjectEntity.extend({	
+	
+	init:function (x, y, settings) {
+	  settings.image = 'doggy';
+	  settings.spritewidth = 32;	
+		this.parent(x, y , settings);
+	},
+
+	update : function () {			
+		this.parent();
+		return true;
+	}
+
+});
 
 
 /**
