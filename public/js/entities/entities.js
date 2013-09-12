@@ -1,6 +1,27 @@
 /**
  * Player Entity
  */
+game.TestEntity = me.ObjectEntity.extend(
+{	
+	
+	init:function (x, y, settings)
+	{
+		this.parent(x, y , settings);
+	},
+
+	update : function ()
+	{
+			
+		return false;
+	}
+
+});
+
+
+
+/**
+ * Player Entity
+ */
 game.PlayerEntity = me.ObjectEntity.extend(
 {	
   

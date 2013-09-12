@@ -35,6 +35,12 @@
     <property name="spritewidth" value="32"/>
    </properties>
   </object>
+  <object name="TestEntity" x="512" y="192" width="32" height="32">
+   <properties>
+    <property name="image" value="bodybuilder"/>
+    <property name="spritewidth" value="32"/>
+   </properties>
+  </object>
  </objectgroup>
  <layer name="foreground" width="40" height="15" visible="0">
   <data encoding="base64">
