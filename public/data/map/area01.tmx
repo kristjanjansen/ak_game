@@ -35,7 +35,7 @@
    </properties>
   </object>
   <object name="bodybuilder" x="512" y="192" width="32" height="32"/>
-  <object name="doggy" x="480" y="352" width="32" height="32"/>
+  <object name="doggie" x="480" y="352" width="32" height="32"/>
  </objectgroup>
  <layer name="foreground" width="40" height="15" visible="0">
   <data encoding="base64">

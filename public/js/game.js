@@ -39,7 +39,7 @@ var game = {
 		// add our player entity in the entity pool
 		me.entityPool.add("player", game.PlayerEntity);
 		me.entityPool.add("bodybuilder", game.BodybuilderEntity);
-		me.entityPool.add("doggy", game.DoggyEntity);
+		me.entityPool.add("doggie", game.DoggieEntity);
 
 		// enable the keyboard
 		me.input.bindKey(me.input.KEY.LEFT,		"left");

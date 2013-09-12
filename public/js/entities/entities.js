@@ -17,10 +17,10 @@ game.BodybuilderEntity = me.ObjectEntity.extend({
 });
 
 
-game.DoggyEntity = me.ObjectEntity.extend({	
+game.DoggieEntity = me.ObjectEntity.extend({	
 	
 	init:function (x, y, settings) {
-	  settings.image = 'doggy';
+	  settings.image = 'doggie';
 	  settings.spritewidth = 32;	
 		this.parent(x, y , settings);
 	},
