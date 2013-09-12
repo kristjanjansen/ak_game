@@ -23,11 +23,35 @@ game.DoggieEntity = me.ObjectEntity.extend({
 	  settings.image = 'doggie';
 	  settings.spritewidth = 32;	
 		this.parent(x, y , settings);
+		
+		this.setVelocity(2, 0);
+		
+		this.startX = x;
+    this.endX = x + settings.width - settings.spritewidth;    
+    this.pos.x = this.endX;
+    
+    this.walkLeft = true;
+    
 	},
 
 	update : function () {			
-		this.parent();
-		return true;
+
+    if (this.walkLeft && this.pos.x <= this.startX) {
+        this.walkLeft = false;
+    } else if (!this.walkLeft && this.pos.x >= this.endX) {
+        this.walkLeft = true;
+    }
+    this.flipX(this.walkLeft);
+    this.vel.x += (this.walkLeft) ? -this.accel.x * me.timer.tick : this.accel.x * me.timer.tick;
+
+    this.updateMovement();
+     
+    if (this.vel.x !=0 || this.vel.y !=0) {
+        this.parent();
+        return true;
+    }
+    return false;
+
 	}
 
 });
