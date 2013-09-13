@@ -24,7 +24,6 @@ do
   convert ${i} -filter box -resize 400%x400% ${i//source/public/data}
 done
 
-
 # Tiles
 
 rm -f public/data/images/tiles/*
@@ -36,10 +35,12 @@ done
 
 # Sounds
 
-rm -f public/data/sounds/music/*
-rm -f public/data/sounds/effects/*
+rm -f public/data/audio/music/*
+rm -f public/data/audio/effects/*
 
-cp source/sounds/music/* public/data/sounds/music/.
-cp source/sounds/effects/* public/data/sounds/effects/. 
+cp source/audio/music/* public/data/audio/music/.
+cp source/audio/effects/* public/data/audio/effects/. 
 
+# Surprise
 
+#cp public/data/images/backgrounds/background1.png public/data/images/backgrounds/background2.png
