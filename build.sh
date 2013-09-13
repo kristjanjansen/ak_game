@@ -34,4 +34,12 @@ do
   montage $i/*.png -geometry +0+0 -tile 1x -filter box -resize 400%x400% ${i//source/public/data}.png
 done
 
+# Sounds
+
+rm -f public/data/sounds/music/*
+rm -f public/data/sounds/effects/*
+
+cp source/sounds/music/* public/data/sounds/music/.
+cp source/sounds/effects/* public/data/sounds/effects/. 
+
 
