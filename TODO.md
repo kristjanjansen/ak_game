@@ -1,7 +1,5 @@
 ## TODO
 
-* rm target
-
 * Tile image build (8/10 x 8 -> 400%)
 
 * Other meta tile types
