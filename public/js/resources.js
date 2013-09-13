@@ -9,6 +9,10 @@ game.resources = [
 	{name: "background1", type:"image",	src: "data/images/backgrounds/background1.png"},
 	{name: "background2", type:"image",	src: "data/images/backgrounds/background2.png"},
 	
-	{name: "level1",  type: "tmx",	src: "data/levels/level1.tmx"}
+	{name: "level1",  type: "tmx",	src: "data/levels/level1.tmx"},
+	
+	{name: "level1", type: "audio", src: "data/sounds/music/", channel : 1},
+	
+//	{name: "jump", type: "audio", src: "data/sounds/effects/", channel : 2},
 
 ];
