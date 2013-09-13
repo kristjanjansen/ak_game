@@ -6,9 +6,9 @@ game.resources = [
 	{name: "bodybuilder", type:"image",	src: "data/img/sprite/bodybuilder.png"},
 	{name: "doggie", type:"image",	src: "data/img/sprite/doggie.png"},
 
-	{name: "background_1", type:"image",	src: "data/img/background/background_1.png"},
-	{name: "background_2", type:"image",	src: "data/img/background/background_2.png"},
+	{name: "background1", type:"image",	src: "data/img/background/background1.png"},
+	{name: "background2", type:"image",	src: "data/img/background/background2.png"},
 	
-	{name: "area01",  type: "tmx",	src: "data/map/area01.tmx"}
+	{name: "level1",  type: "tmx",	src: "data/map/level1.tmx"}
 
 ];

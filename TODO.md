@@ -1,8 +1,5 @@
 ## TODO
 
-* Tile image build (8/10 x 8 -> 400%)
-
-* Other meta tile types
 
 * img/sprite -> images/sprites
 * img/background -> images/backgrounds
@@ -17,3 +14,5 @@
 * Palette (0,64,128,192,255) ?
 
 * Sprite states (8 x n) ? idle, walking/running, climbing
+
+* Other meta tile types
