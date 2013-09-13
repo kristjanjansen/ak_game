@@ -11,11 +11,19 @@ do
 done
 
 
+# Background images
+
 rm -f public/data/img/background/*
 
 for i in $(find source/img/background -mindepth 1 -maxdepth 1 -type f)
 do
   convert ${i} -filter box -resize 400%x400% ${i//source/public/data}
+done
+
+
+for i in $(find source/img/map -mindepth 1 -maxdepth 1 -type d)
+do
+  montage $i/*.png -geometry +0+0 -tile 1x -filter box -resize 400%x400% ${i//source/public/data}.png
 done
 
 #montage source/tiles/*.png -geometry +0+0 -tile 1x -filter box -resize 400%x400% target/tiles/tiles.png 
