@@ -89,12 +89,14 @@ game.PlayerEntity = me.ObjectEntity.extend(
 		{
 			this.vel.x = 0;
 		}
+		
 		if (me.input.isKeyPressed('jump'))
 		{	
 			if (!this.jumping && !this.falling) 
 			{
 				this.vel.y = -this.maxVel.y * me.timer.tick;
 				this.jumping = true;
+				me.audio.play("jump");        
 			}
 		}
 		

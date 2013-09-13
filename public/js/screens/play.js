@@ -5,7 +5,6 @@ game.PlayScreen = me.ScreenObject.extend({
 		me.audio.playTrack("level1");
 	},
 	
-	
 	onDestroyEvent: function() {
 	  me.audio.stopTrack();
 	}
