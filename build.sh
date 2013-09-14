@@ -49,6 +49,6 @@ rm -f public/data/audio/effects/*
 cp source/audio/music/* public/data/audio/music/.
 cp source/audio/effects/* public/data/audio/effects/. 
 
-# Surprise
+# Hide bg
 
 #cp public/data/images/backgrounds/background1.png public/data/images/backgrounds/background2.png
