@@ -4,6 +4,10 @@ game.BodybuilderEntity = me.ObjectEntity.extend({
 	  settings.image = 'bodybuilder';
 	  settings.spritewidth = 32;	
 		this.parent(x, y , settings);
+		
+		this.renderable.addAnimation("walk", [0,1,2]);
+    this.renderable.setCurrentAnimation("walk");
+		
 	},
 
 	update : function () {			
@@ -29,6 +33,9 @@ game.DoggieEntity = me.ObjectEntity.extend({
     
     this.walkLeft = true;
     
+    this.renderable.addAnimation("walk", [0,1,2]);
+    this.renderable.setCurrentAnimation("walk");
+		    
 	},
 
 	update : function () {			
@@ -70,6 +77,9 @@ game.PlayerEntity = me.ObjectEntity.extend(
 		
 		me.game.viewport.follow(this.pos, me.game.viewport.AXIS.BOTH);
 		
+		this.renderable.addAnimation("walk", [0,1,2]);
+    this.renderable.setCurrentAnimation("walk");
+    
 	},
 
 	update : function ()
