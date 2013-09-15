@@ -5,7 +5,7 @@ game.BodybuilderEntity = me.ObjectEntity.extend({
 	  settings.spritewidth = 32;	
 		this.parent(x, y , settings);
 		
-		this.renderable.addAnimation("walk", [0,1,2]);
+		this.renderable.addAnimation("walk", [0,1]);
     this.renderable.setCurrentAnimation("walk");
 		
 	},
