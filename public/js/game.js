@@ -1,7 +1,10 @@
 var game = {
 
     "onload" : function () {
-
+      
+      me.sys.fps = 10;
+      me.sys.useNativeAnimFrame = true;
+        
         if (!me.video.init("screen", 640, 480, true, 'auto')) {
             alert("Your browser does not support HTML5 canvas.");
             return;
@@ -15,6 +18,7 @@ var game = {
 
 //        me.audio.init("mp3");
 
+        
         me.loader.onload = this.loaded.bind(this);
      
         me.loader.preload(game.resources);
@@ -25,7 +29,7 @@ var game = {
 
 
     "loaded" : function () {
-
+      
       me.state.set(me.state.MENU, new game.TitleScreen());
       me.state.set(me.state.PLAY, new game.PlayScreen());
 		
