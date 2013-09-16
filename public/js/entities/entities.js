@@ -69,6 +69,7 @@ game.PlayerEntity = me.ObjectEntity.extend(
 	{
 		settings.image = 'emo';
 	  settings.spritewidth = 32;	
+	  settings.spriteheight = 32;	
 		this.parent(x, y , settings);
 
 		this.setVelocity(4, 16);
@@ -77,7 +78,8 @@ game.PlayerEntity = me.ObjectEntity.extend(
 		
 		me.game.viewport.follow(this.pos, me.game.viewport.AXIS.BOTH);
 		
-		this.renderable.addAnimation("walk", [0,1,2]);
+		this.renderable.addAnimation("walk", [0,1]);
+		this.renderable.addAnimation("duck", [8,9]);
     this.renderable.setCurrentAnimation("walk");
     
 	},
