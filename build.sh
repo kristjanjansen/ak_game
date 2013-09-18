@@ -52,14 +52,15 @@ done
 
 # Tiles
 
-rm /Volumes/Disain\'s\ Public\ Folder/MK-11/projektid/game/source/images/tiles/*.png
+#rm /Volumes/Disain\'s\ Public\ Folder/MK-11/projektid/game/source/images/tiles/*.png
 cp -R /Volumes/Disain\'s\ Public\ Folder/MK-11/projektid/game/source/images/tiles/* source/images/tiles/.
 
 rm -f public/data/images/tiles/*
 
 for i in $(find source/images/tiles -mindepth 1 -maxdepth 1 -type d)
 do
-  montage $i/*.png -geometry +0+0 -tile 1x -filter box -resize 400%x400% ${i//source/public/data}.png
+#  montage $i/*.png -background None -geometry +0+0 -tile 1x -filter box -resize 400%x400% ${i//source/public/data}.png
+  convert $i/*.png -background None -append -filter box -resize 400%x400% ${i//source/public/data}.png
 done
 
 cp public/data/images/tiles/*.png /Volumes/Disain\'s\ Public\ Folder/MK-11/projektid/game/source/images/tiles/.
