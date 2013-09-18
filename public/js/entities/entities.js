@@ -2,7 +2,7 @@ game.BodybuilderEntity = me.ObjectEntity.extend({
 	
 	init:function (x, y, settings) {
 	  settings.image = 'bodybuilder';
-	  settings.spritewidth = 32;	
+	  settings.spritewidth = 64;	
 		this.parent(x, y , settings);
 		
 		this.renderable.addAnimation("walk", [0,1]);
@@ -72,7 +72,7 @@ game.PlayerEntity = me.ObjectEntity.extend(
 	  settings.spriteheight = 32;	
 		this.parent(x, y , settings);
 
-		this.setVelocity(4, 16);
+		this.setVelocity(5, 18);
 	 
 //		this.updateColRect(8,48, -1,0);
 		
