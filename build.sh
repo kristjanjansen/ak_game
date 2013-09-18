@@ -1,7 +1,9 @@
 #!/bin/sh
 
+# Tiles
+
 # http://superuser.com/questions/290656/combine-multiple-images-using-imagemagick
-#cp -R /Volumes/Disain\'s\ Public\ Folder/MK-11/game/sprite/* source/sprite/.
+#cp -R /Volumes/Disain\'s\ Public\ Folder/MK-11/projects/game/sprite/* source/sprite/.
 #cp -R target/sprite/* public/data/img/sprite/.
 
 #for i in $(find source/images/sprites -mindepth 1 -maxdepth 1 -type d)
@@ -11,6 +13,8 @@
 
 
 # Sprites
+
+cp -R /Volumes/Disain\'s\ Public\ Folder/MK-11/projektid/game/source/images/sprites/* source/images/sprites/.
 
 rm -f public/data/images/sprites/*
 
@@ -46,6 +50,9 @@ done
 
 # Tiles
 
+rm /Volumes/Disain\'s\ Public\ Folder/MK-11/projektid/game/source/images/tiles/*.png
+cp -R /Volumes/Disain\'s\ Public\ Folder/MK-11/projektid/game/source/images/tiles/* source/images/tiles/.
+
 rm -f public/data/images/tiles/*
 
 for i in $(find source/images/tiles -mindepth 1 -maxdepth 1 -type d)
@@ -53,6 +60,7 @@ do
   montage $i/*.png -geometry +0+0 -tile 1x -filter box -resize 400%x400% ${i//source/public/data}.png
 done
 
+cp public/data/images/tiles/*.png /Volumes/Disain\'s\ Public\ Folder/MK-11/projektid/game/source/images/tiles/.
 
 # Sounds
 
@@ -66,3 +74,7 @@ cp source/audio/effects/* public/data/audio/effects/.
 # Hide bg
 
 #cp public/data/images/backgrounds/background1.png public/data/images/backgrounds/background2.png
+
+# Level
+
+cp /Volumes/Disain\'s\ Public\ Folder/MK-11/projektid/game/source/levels/*.tmx public/data/levels/.
