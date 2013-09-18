@@ -40,11 +40,13 @@ done
 
 # Background images
 
+cp -R /Volumes/Disain\'s\ Public\ Folder/MK-11/projektid/game/source/images/backgrounds/* source/images/backgrounds/.
+
 rm -f public/data/images/backgrounds/*
 
 for i in $(find source/images/backgrounds -mindepth 1 -maxdepth 1 -type f)
 do
-  convert ${i} -filter box -resize 400%x400% ${i//source/public/data}
+  convert ${i} -filter box -resize 400%x400% +level-colors tan3,tan1 ${i//source/public/data}
 done
 
 

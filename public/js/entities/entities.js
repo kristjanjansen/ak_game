@@ -80,6 +80,8 @@ game.PlayerEntity = me.ObjectEntity.extend(
 		
 		this.renderable.addAnimation("walk", [0,1]);
 		this.renderable.addAnimation("duck", [8,9]);
+		this.renderable.addAnimation("jump", [16]);
+		this.renderable.addAnimation("jumpstay", [16]);
     this.renderable.setCurrentAnimation("walk");
     
 	},
@@ -109,6 +111,7 @@ game.PlayerEntity = me.ObjectEntity.extend(
 				this.vel.y = -this.maxVel.y * me.timer.tick;
 				this.jumping = true;
 				me.audio.play("jump");        
+  			this.renderable.setCurrentAnimation("jump", "walk");
 			}
 		}
 		
