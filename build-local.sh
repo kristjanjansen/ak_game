@@ -55,3 +55,12 @@ rm -f public/data/audio/effects/*
 
 cp source/audio/music/* public/data/audio/music/.
 cp source/audio/effects/* public/data/audio/effects/. 
+
+# Fonts
+
+rm -f public/data/fonts/*
+
+for i in $(find source/fonts -mindepth 1 -maxdepth 1 -type f)
+do
+  convert $i -background None -append -filter box -resize 400%x400% ${i//source/public/data}
+done
