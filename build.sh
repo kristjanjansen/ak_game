@@ -68,3 +68,14 @@ cp source/audio/effects/* public/data/audio/effects/.
 # Level
 
 cp /Volumes/Disain\'s\ Public\ Folder/MK-11/projektid/game/source/levels/*.tmx public/data/levels/.
+
+# Fonts
+
+cp /Volumes/Disain\'s\ Public\ Folder/MK-11/projektid/game/source/fonts/*.png source/fonts/*.png
+
+rm -f public/data/fonts/*
+
+for i in $(find source/fonts -mindepth 1 -maxdepth 1 -type f)
+do
+  convert $i -background None -append -filter box -resize 400%x400% ${i//source/public/data}
+done
