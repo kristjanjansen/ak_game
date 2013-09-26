@@ -22,10 +22,11 @@ game.DoggieEntity = me.ObjectEntity.extend({
 	
 	init:function (x, y, settings) {
 	  settings.image = 'doggie';
-	  settings.spritewidth = 32;	
+	  settings.spritewidth = 64;	
+	  settings.spriteheight = 64;	
 		this.parent(x, y , settings);
 		
-		this.setVelocity(2, 0);
+		this.setVelocity(1, 0);
 		
 		this.startX = x;
     this.endX = x + settings.width - settings.spritewidth;    

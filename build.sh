@@ -71,7 +71,7 @@ cp /Volumes/Disain\'s\ Public\ Folder/MK-11/projektid/game/source/levels/*.tmx p
 
 # Fonts
 
-cp /Volumes/Disain\'s\ Public\ Folder/MK-11/projektid/game/source/fonts/*.png source/fonts/*.png
+cp /Volumes/Disain\'s\ Public\ Folder/MK-11/projektid/game/source/fonts/*.png source/fonts/.
 
 rm -f public/data/fonts/*
 
