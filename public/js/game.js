@@ -32,6 +32,7 @@ var game = {
 		  me.entityPool.add("player", game.PlayerEntity);
 		  me.entityPool.add("bodybuilder", game.BodybuilderEntity);
 		  me.entityPool.add("doggie", game.DoggieEntity);
+		  me.entityPool.add("boss", game.BossEntity);
 
 		  me.input.bindKey(me.input.KEY.LEFT,	"left");
 		  me.input.bindKey(me.input.KEY.RIGHT, "right");

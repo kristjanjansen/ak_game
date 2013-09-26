@@ -2,7 +2,7 @@ game.BodybuilderEntity = me.ObjectEntity.extend({
 	
 	init:function (x, y, settings) {
 	  settings.image = 'bodybuilder';
-	  settings.spritewidth = 64;	
+	  settings.spritewidth = 32;	
 	  settings.spriteheight = 64;	
 		this.parent(x, y , settings);
 		
@@ -84,6 +84,51 @@ game.DoggieEntity = me.ObjectEntity.extend({
 	}
 
 });
+
+
+game.BossEntity = me.ObjectEntity.extend({	
+	
+	init:function (x, y, settings) {
+	  settings.image = 'boss';
+	  settings.spritewidth = 128;	
+	  settings.spriteheight = 128;	
+		this.parent(x, y , settings);
+		
+		this.setVelocity(1, 0);
+		
+		this.startX = x;
+    this.endX = x + settings.width - settings.spritewidth;    
+    this.pos.x = this.endX;
+    
+    this.walkLeft = true;
+    
+    this.renderable.addAnimation("walk", [0,1]);
+    this.renderable.setCurrentAnimation("walk");
+		    
+	},
+
+	update : function () {			
+
+    if (this.walkLeft && this.pos.x <= this.startX) {
+        this.walkLeft = false;
+    } else if (!this.walkLeft && this.pos.x >= this.endX) {
+        this.walkLeft = true;
+    }
+    this.flipX(this.walkLeft);
+    this.vel.x += (this.walkLeft) ? -this.accel.x * me.timer.tick : this.accel.x * me.timer.tick;
+
+    this.updateMovement();
+     
+    if (this.vel.x !=0 || this.vel.y !=0) {
+        this.parent();
+        return true;
+    }
+    return false;
+
+	}
+
+});
+
 
 
 game.PlayerEntity = me.ObjectEntity.extend(

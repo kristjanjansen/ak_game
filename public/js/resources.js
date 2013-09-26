@@ -5,6 +5,7 @@ game.resources = [
 	{name: "emo", type:"image",	src: "data/images/sprites/emo.png"},
 	{name: "bodybuilder", type:"image",	src: "data/images/sprites/bodybuilder.png"},
 	{name: "doggie", type:"image",	src: "data/images/sprites/doggie.png"},
+	{name: "boss", type:"image",	src: "data/images/sprites/boss.png"},
 
 	{name: "background1", type:"image",	src: "data/images/backgrounds/background1.png"},
 	{name: "background2", type:"image",	src: "data/images/backgrounds/background2.png"},
