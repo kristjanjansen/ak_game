@@ -240,9 +240,7 @@ game.PlayerEntity = me.ObjectEntity.extend(
         //res.obj.renderable.flicker(45);
         this.renderable.flicker(30);
       }
-      
-      console.log(res.obj)
-      
+            
       if (res.obj.type == me.game.COLLECTABLE_OBJECT) {
          me.game.HUD.updateItemValue('score', res.obj.bonus);
       }
