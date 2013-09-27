@@ -34,6 +34,8 @@ var game = {
 		  me.entityPool.add("thug", game.ThugEntity);
 		  me.entityPool.add("boss", game.BossEntity);
 
+		  me.entityPool.add("card", game.CardEntity);
+
 		  me.input.bindKey(me.input.KEY.LEFT,	"left");
 		  me.input.bindKey(me.input.KEY.RIGHT, "right");
 		  me.input.bindKey(me.input.KEY.SPACE, "jump", true);

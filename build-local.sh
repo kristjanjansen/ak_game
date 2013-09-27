@@ -64,3 +64,5 @@ for i in $(find source/fonts -mindepth 1 -maxdepth 1 -type f)
 do
   convert $i -background None -append -filter box -resize 400%x400% ${i//source/public/data}
 done
+
+echo "Local build completed"

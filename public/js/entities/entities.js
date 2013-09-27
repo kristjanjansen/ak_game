@@ -1,3 +1,22 @@
+game.CardEntity = me.CollectableEntity.extend({
+   
+    init: function(x, y, settings) {
+  	  settings.image = 'card';
+  	  settings.spritewidth = 32;	
+  	  settings.spriteheight = 64;
+      this.parent(x, y, settings);
+      this.renderable.addAnimation("walk", [0,1]);
+      this.renderable.setCurrentAnimation("walk");
+      
+    },
+ 
+    onCollision: function() {
+        this.collidable = false;
+        me.game.remove(this);
+    }
+ 
+});
+
 game.BibleEntity = me.ObjectEntity.extend({	
 	
 	init:function (x, y, settings) {

@@ -36,7 +36,7 @@ rm -f public/data/images/backgrounds/*
 for i in $(find source/images/backgrounds -mindepth 1 -maxdepth 1 -type f)
 do
   #  convert ${i} -filter box -resize 400%x400% ${i//source/public/data}
-    convert ${i} -filter box -resize 400%x400% +level-colors tan3,tan1 ${i//source/public/data}
+    convert ${i} -filter box -resize 400%x400% +level-colors sienna3,tan1 ${i//source/public/data}
   #  convert ${i} -filter box -resize 400%x400% +level-colors steelblue,skyblue ${i//source/public/data}
   #  convert ${i} -filter box -resize 400%x400%  +level-colors indigo,darkorchid3 ${i//source/public/data}
 done
@@ -51,7 +51,8 @@ rm -f public/data/images/tiles/*
 
 for i in $(find source/images/tiles -mindepth 1 -maxdepth 1 -type d)
 do
-  convert $i/*.png -background None -append -filter box -resize 400%x400% ${i//source/public/data}.png
+#  convert $i/*.png -background None -append -filter box -resize 400%x400% ${i//source/public/data}.png
+  convert $i/*.png -background None -append -filter box -resize 400%x400% +level-colors black,tan3 ${i//source/public/data}.png
 done
 
 cp public/data/images/tiles/*.png /Volumes/Disain\'s\ Public\ Folder/MK-11/projektid/game/source/images/tiles/.
@@ -79,3 +80,5 @@ for i in $(find source/fonts -mindepth 1 -maxdepth 1 -type f)
 do
   convert $i -background None -append -filter box -resize 400%x400% ${i//source/public/data}
 done
+
+echo "Build completed"
