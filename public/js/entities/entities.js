@@ -21,17 +21,19 @@ game.CardEntity = me.CollectableEntity.extend({
   	  settings.image = 'card';
   	  settings.spritewidth = 32;	
   	  settings.spriteheight = 64;
+  	  
       this.parent(x, y, settings);
       this.renderable.addAnimation("walk", [0,1]);
       this.renderable.setCurrentAnimation("walk");
       
+      this.bonus = 100;
     },
  
     onCollision: function() {
         me.audio.play("pickup2");        				
         this.collidable = false;
         me.game.remove(this);
-        me.game.HUD.updateItemValue('score', 100);
+      //  me.game.HUD.updateItemValue('score', 100);
         
     }
  
@@ -178,7 +180,10 @@ game.PlayerEntity = me.ObjectEntity.extend(
 	{
 		settings.image = 'emo';
 	  settings.spritewidth = 32;	
-	  settings.spriteheight = 32;	
+	  settings.spriteheight = 32;
+	  
+	  settings.score = 0;
+	  
 		this.parent(x, y , settings);
 
 		this.setVelocity(5, 18);
@@ -230,10 +235,20 @@ game.PlayerEntity = me.ObjectEntity.extend(
 		var res = me.game.collide(this);
 
      if (res) {
-         if (res.obj.type == me.game.ENEMY_OBJECT) {
+      
+      if (res.obj.type == me.game.ENEMY_OBJECT) {
         //res.obj.renderable.flicker(45);
         this.renderable.flicker(30);
       }
+      
+      console.log(res.obj)
+      
+      if (res.obj.type == me.game.COLLECTABLE_OBJECT) {
+         me.game.HUD.updateItemValue('score', res.obj.bonus);
+      }
+     
+      
+     
      }
      
 		if (this.vel.x!=0 || this.vel.y!=0)
