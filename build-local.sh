@@ -19,7 +19,7 @@ do
   done
   
   targetfile=$(echo $i | cut -d'/' -f4)
-  convert tmp-row-*.png -background None -append -extent 64x -filter box -resize 400%x400% public/data/images/sprites/$targetfile.png
+  convert tmp-row-*.png -background None -append -extent 128x -filter box -resize 400%x400% public/data/images/sprites/$targetfile.png
   rm tmp-row-*.png
 
 done

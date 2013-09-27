@@ -1,7 +1,7 @@
-game.BodybuilderEntity = me.ObjectEntity.extend({	
+game.BibleEntity = me.ObjectEntity.extend({	
 	
 	init:function (x, y, settings) {
-	  settings.image = 'bodybuilder';
+	  settings.image = 'bible';
 	  settings.spritewidth = 32;	
 	  settings.spriteheight = 64;	
 		this.parent(x, y , settings);
@@ -42,10 +42,10 @@ game.BodybuilderEntity = me.ObjectEntity.extend({
 });
 
 
-game.DoggieEntity = me.ObjectEntity.extend({	
+game.ThugEntity = me.ObjectEntity.extend({	
 	
 	init:function (x, y, settings) {
-	  settings.image = 'doggie';
+	  settings.image = 'thug';
 	  settings.spritewidth = 64;	
 	  settings.spriteheight = 64;	
 		this.parent(x, y , settings);
@@ -102,7 +102,7 @@ game.BossEntity = me.ObjectEntity.extend({
     
     this.walkLeft = true;
     
-    this.renderable.addAnimation("walk", [0,1]);
+    this.renderable.addAnimation("walk", [0,1,3,4]);
     this.renderable.setCurrentAnimation("walk");
 		    
 	},

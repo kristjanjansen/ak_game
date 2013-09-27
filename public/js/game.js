@@ -30,8 +30,8 @@ var game = {
       me.state.set(me.state.PLAY, new game.PlayScreen());
 		
 		  me.entityPool.add("player", game.PlayerEntity);
-		  me.entityPool.add("bodybuilder", game.BodybuilderEntity);
-		  me.entityPool.add("doggie", game.DoggieEntity);
+		  me.entityPool.add("bible", game.BibleEntity);
+		  me.entityPool.add("thug", game.ThugEntity);
 		  me.entityPool.add("boss", game.BossEntity);
 
 		  me.input.bindKey(me.input.KEY.LEFT,	"left");

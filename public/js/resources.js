@@ -3,8 +3,8 @@ game.resources = [
 	{name: "tiles",  type:"image",	src: "data/images/tiles/tiles.png"},
 
 	{name: "emo", type:"image",	src: "data/images/sprites/emo.png"},
-	{name: "bodybuilder", type:"image",	src: "data/images/sprites/bodybuilder.png"},
-	{name: "doggie", type:"image",	src: "data/images/sprites/doggie.png"},
+	{name: "bible", type:"image",	src: "data/images/sprites/bible.png"},
+	{name: "thug", type:"image",	src: "data/images/sprites/thug.png"},
 	{name: "boss", type:"image",	src: "data/images/sprites/boss.png"},
 
 	{name: "background1", type:"image",	src: "data/images/backgrounds/background1.png"},

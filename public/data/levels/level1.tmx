@@ -64,8 +64,8 @@
     <property name="spritewidth" value="32"/>
    </properties>
   </object>
-  <object name="doggie" x="704" y="384" width="512" height="64"/>
-  <object name="doggie" x="1760" y="384" width="320" height="64"/>
+  <object name="thug" x="704" y="384" width="512" height="64"/>
+  <object name="thug" x="1760" y="384" width="320" height="64"/>
   <object name="boss" x="2368" y="32" width="160" height="128"/>
  </objectgroup>
  <layer name="collision" width="80" height="15">
