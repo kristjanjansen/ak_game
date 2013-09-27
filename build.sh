@@ -52,7 +52,7 @@ rm -f public/data/images/tiles/*
 for i in $(find source/images/tiles -mindepth 1 -maxdepth 1 -type d)
 do
 #  convert $i/*.png -background None -append -filter box -resize 400%x400% ${i//source/public/data}.png
-  convert $i/*.png -background None -append -filter box -resize 400%x400% +level-colors black,tan3 ${i//source/public/data}.png
+  convert $i/*.png -background None -append -filter box -resize 400%x400% +level-colors 'rgb(15,5,5)','rgb(70,50,50)' ${i//source/public/data}.png
 done
 
 cp public/data/images/tiles/*.png /Volumes/Disain\'s\ Public\ Folder/MK-11/projektid/game/source/images/tiles/.

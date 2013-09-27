@@ -4,7 +4,7 @@ game.PlayScreen = me.ScreenObject.extend({
   //	me.audio.disable()
 		me.levelDirector.loadLevel("level1");
 		
-		me.game.addHUD(5, 5, 640, 32);
+		me.game.addHUD(7, 7, 640, 32);
     me.game.HUD.addItem('score', new game.ScoreObject(0, 0));
     
     me.game.sort();
