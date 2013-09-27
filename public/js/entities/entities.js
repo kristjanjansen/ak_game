@@ -1,3 +1,20 @@
+game.SpikesEntity = me.ObjectEntity.extend({	
+	
+	init:function (x, y, settings) {
+		this.parent(x, y , settings);
+		this.type = me.game.ENEMY_OBJECT;
+	},
+
+	update : function () {			
+
+    return false;
+
+	}
+
+});
+
+
+
 game.CardEntity = me.CollectableEntity.extend({
    
     init: function(x, y, settings) {
@@ -11,8 +28,11 @@ game.CardEntity = me.CollectableEntity.extend({
     },
  
     onCollision: function() {
+        me.audio.play("pickup2");        				
         this.collidable = false;
         me.game.remove(this);
+        me.game.HUD.updateItemValue('score', 100);
+        
     }
  
 });
@@ -35,7 +55,7 @@ game.BibleEntity = me.ObjectEntity.extend({
     
     this.renderable.addAnimation("walk", [0,1]);
     this.renderable.setCurrentAnimation("walk");
-		    
+		this.type = me.game.ENEMY_OBJECT;
 	},
 
 	update : function () {			
@@ -79,7 +99,7 @@ game.ThugEntity = me.ObjectEntity.extend({
     
     this.renderable.addAnimation("walk", [0,1,2]);
     this.renderable.setCurrentAnimation("walk");
-		    
+		this.type = me.game.ENEMY_OBJECT;
 	},
 
 	update : function () {			
@@ -123,7 +143,7 @@ game.BossEntity = me.ObjectEntity.extend({
     
     this.renderable.addAnimation("walk", [0,1,3,4]);
     this.renderable.setCurrentAnimation("walk");
-		    
+		this.type = me.game.ENEMY_OBJECT;  
 	},
 
 	update : function () {			
@@ -205,7 +225,17 @@ game.PlayerEntity = me.ObjectEntity.extend(
 		}
 		
 		updated = this.updateMovement();
-			 
+		
+		
+		var res = me.game.collide(this);
+
+     if (res) {
+         if (res.obj.type == me.game.ENEMY_OBJECT) {
+        //res.obj.renderable.flicker(45);
+        this.renderable.flicker(30);
+      }
+     }
+     
 		if (this.vel.x!=0 || this.vel.y!=0)
 		{
 			this.parent();

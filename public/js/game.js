@@ -33,6 +33,7 @@ var game = {
 		  me.entityPool.add("bible", game.BibleEntity);
 		  me.entityPool.add("thug", game.ThugEntity);
 		  me.entityPool.add("boss", game.BossEntity);
+		  me.entityPool.add("spikes", game.SpikesEntity);
 
 		  me.entityPool.add("card", game.CardEntity);
 
