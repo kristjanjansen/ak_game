@@ -22,7 +22,7 @@ game.CardEntity = me.CollectableEntity.extend({
   	  settings.spritewidth = 32;	
   	  settings.spriteheight = 64;
       this.parent(x, y, settings);
-      this.renderable.addAnimation("walk", [8,9]);
+      this.renderable.addAnimation("walk", [0,1]);
       this.renderable.setCurrentAnimation("walk");
       
     },

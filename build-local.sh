@@ -63,6 +63,9 @@ rm -f public/data/fonts/*
 for i in $(find source/fonts -mindepth 1 -maxdepth 1 -type f)
 do
   convert $i -background None -append -filter box -resize 400%x400% ${i//source/public/data}
+#  convert $i +gravity -crop 8x8  ${i//source/public/data}-%d.png
+#  convert ${i//source/public/data}-*.png -extent 9x +append -filter box -resize 400%x400% ${i//source/public/data}
+#  rm ${i//source/public/data}-*.png
 done
 
 echo "Local build completed"
