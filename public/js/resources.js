@@ -1,6 +1,7 @@
 game.resources = [
 
 	{name: "tiles",  type:"image",	src: "data/images/tiles/tiles.png"},
+	{name: "collision",  type:"image",	src: "data/images/tiles/collision.png"},
 
 	{name: "emo", type:"image",	src: "data/images/sprites/emo.png"},
 	{name: "bible", type:"image",	src: "data/images/sprites/bible.png"},

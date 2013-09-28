@@ -64,8 +64,9 @@
     <property name="spritewidth" value="32"/>
    </properties>
   </object>
-  <object name="thug" x="704" y="352" width="512" height="64"/>
-  <object name="thug" x="1760" y="352" width="320" height="64"/>
+  <object name="thug" x="704" y="384" width="512" height="64"/>
+  <object name="thug" x="1760" y="384" width="320" height="64"/>
+  <object name="boss" x="2240" y="32" width="224" height="128"/>
   <object name="card" x="480" y="160" width="32" height="32"/>
   <object name="card" x="544" y="96" width="32" height="32"/>
   <object name="card" x="1280" y="192" width="32" height="32"/>

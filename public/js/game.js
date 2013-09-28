@@ -29,6 +29,9 @@ var game = {
       me.state.set(me.state.MENU, new game.TitleScreen());
       me.state.set(me.state.PLAY, new game.PlayScreen());
 		
+	//	  me.entityPool.add("walkable", game.WalkableEntity);
+		
+		
 		  me.entityPool.add("player", game.PlayerEntity);
 		  me.entityPool.add("bible", game.BibleEntity);
 		  me.entityPool.add("thug", game.ThugEntity);
