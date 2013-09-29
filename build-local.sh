@@ -62,7 +62,7 @@ rm -f public/data/fonts/*
 
 for i in $(find source/fonts -mindepth 1 -maxdepth 1 -type f)
 do
-  convert $i -background None -append -filter box -resize 200%x200% -negate ${i//source/public/data}
+  convert $i -background None -append -filter box -resize 400%x400% -channel Alpha -evaluate Divide 4 ${i//source/public/data}
 #  convert $i +gravity -crop 8x8  ${i//source/public/data}-%03d.png
 #  convert ${i//source/public/data}-*.png -extent 9x -background None +append -filter box -resize 400%x400% ${i//source/public/data}
 #  rm ${i//source/public/data}-*.png
