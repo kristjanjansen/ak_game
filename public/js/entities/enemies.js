@@ -1,3 +1,5 @@
+// Base classes
+
 game.StaticEnemyEntity = me.ObjectEntity.extend({	
 	
 	init:function (x, y, settings) {
@@ -53,6 +55,8 @@ game.WalkingEnemyEntity = me.ObjectEntity.extend({
 });
 
 
+// Enemy classes
+
 
 game.SpikesEntity = game.StaticEnemyEntity.extend({	
 	
@@ -60,7 +64,7 @@ game.SpikesEntity = game.StaticEnemyEntity.extend({
 
 		this.parent(x, y , settings);
  
-    this.damage = 100;
+    this.health = -100;
 
 	},
 
@@ -76,7 +80,7 @@ game.ThugEntity = game.WalkingEnemyEntity.extend({
 	  settings.spriteheight = 64;	
 		this.parent(x, y , settings);
 		
-		this.damage = 200;
+		this.health = -200;
     
     this.renderable.addAnimation("walk", [0,1,2]);
     this.renderable.setCurrentAnimation("walk");
@@ -92,7 +96,7 @@ game.BibleEntity = game.WalkingEnemyEntity.extend({
 	  settings.spriteheight = 64;	
 		this.parent(x, y , settings);
 		
-		this.damage = 200;
+		this.health = -200;
     
     this.renderable.addAnimation("walk", [0,1]);
     this.renderable.setCurrentAnimation("walk");
@@ -108,7 +112,7 @@ game.BossEntity = game.WalkingEnemyEntity.extend({
 	  settings.spriteheight = 128;	
 		this.parent(x, y , settings);
 		
-		this.damage = 400;
+		this.health = -400;
     
     this.renderable.addAnimation("walk", [0,1,2,3]);
     this.renderable.setCurrentAnimation("walk");

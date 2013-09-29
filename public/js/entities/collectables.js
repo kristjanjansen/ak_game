@@ -9,7 +9,7 @@ game.CardEntity = me.CollectableEntity.extend({
       this.renderable.addAnimation("idle", [0,1]);
       this.renderable.setCurrentAnimation("idle");
       
-      this.credit = 100;
+      this.score = 100;
       this.audio = 'pickup2';
     },
  

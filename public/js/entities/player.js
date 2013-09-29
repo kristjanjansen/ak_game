@@ -1,179 +1,3 @@
-/*
-game.SpikesEntity = me.ObjectEntity.extend({	
-	
-	init:function (x, y, settings) {
-		this.parent(x, y , settings);
-		this.type = me.game.ENEMY_OBJECT;
-	},
-
-	update : function () {			
-
-    return false;
-
-	}
-
-});
-*/
-
-/*
-game.CardEntity = me.CollectableEntity.extend({
-   
-    init: function(x, y, settings) {
-  	  settings.image = 'card';
-  	  settings.spritewidth = 32;	
-  	  settings.spriteheight = 64;
-  	  
-      this.parent(x, y, settings);
-      this.renderable.addAnimation("walk", [0,1]);
-      this.renderable.setCurrentAnimation("walk");
-      
-      this.bonus = 100;
-    },
- 
-    onCollision: function() {
-        me.audio.play("pickup2");        				
-        this.collidable = false;
-        me.game.remove(this);
-      //  me.game.HUD.updateItemValue('score', 100);
-        
-    }
- 
-});
-*/
-/*
-game.BibleEntity = me.ObjectEntity.extend({	
-	
-	init:function (x, y, settings) {
-	  settings.image = 'bible';
-	  settings.spritewidth = 32;	
-	  settings.spriteheight = 64;	
-		this.parent(x, y , settings);
-		
-		this.setVelocity(1, 0);
-		
-		this.startX = x;
-    this.endX = x + settings.width - settings.spritewidth;    
-    this.pos.x = this.endX;
-    
-    this.walkLeft = true;
-    
-    this.renderable.addAnimation("walk", [0,1]);
-    this.renderable.setCurrentAnimation("walk");
-		this.type = me.game.ENEMY_OBJECT;
-	},
-
-	update : function () {			
-
-    if (this.walkLeft && this.pos.x <= this.startX) {
-        this.walkLeft = false;
-    } else if (!this.walkLeft && this.pos.x >= this.endX) {
-        this.walkLeft = true;
-    }
-    this.flipX(this.walkLeft);
-    this.vel.x += (this.walkLeft) ? -this.accel.x * me.timer.tick : this.accel.x * me.timer.tick;
-
-    this.updateMovement();
-     
-    if (this.vel.x !=0 || this.vel.y !=0) {
-        this.parent();
-        return true;
-    }
-    return false;
-
-	}
-
-});
-*/
-/*
-game.ThugEntity = me.ObjectEntity.extend({	
-	
-	init:function (x, y, settings) {
-	  settings.image = 'thug';
-	  settings.spritewidth = 64;	
-	  settings.spriteheight = 64;	
-		this.parent(x, y , settings);
-		
-		this.setVelocity(1, 0);
-		
-		this.startX = x;
-    this.endX = x + settings.width - settings.spritewidth;    
-    this.pos.x = this.endX;
-    
-    this.walkLeft = true;
-    
-    this.renderable.addAnimation("walk", [0,1,2]);
-    this.renderable.setCurrentAnimation("walk");
-		this.type = me.game.ENEMY_OBJECT;
-	},
-
-	update : function () {			
-
-    if (this.walkLeft && this.pos.x <= this.startX) {
-        this.walkLeft = false;
-    } else if (!this.walkLeft && this.pos.x >= this.endX) {
-        this.walkLeft = true;
-    }
-    this.flipX(this.walkLeft);
-    this.vel.x += (this.walkLeft) ? -this.accel.x * me.timer.tick : this.accel.x * me.timer.tick;
-
-    this.updateMovement();
-     
-    if (this.vel.x !=0 || this.vel.y !=0) {
-        this.parent();
-        return true;
-    }
-    return false;
-
-	}
-
-});
-*/
-/*
-game.BossEntity = me.ObjectEntity.extend({	
-	
-	init:function (x, y, settings) {
-	  settings.image = 'boss';
-	  settings.spritewidth = 128;	
-	  settings.spriteheight = 128;	
-		this.parent(x, y , settings);
-		
-		this.setVelocity(1, 0);
-		
-		this.startX = x;
-    this.endX = x + settings.width - settings.spritewidth;    
-    this.pos.x = this.endX;
-    
-    this.walkLeft = true;
-    
-    this.renderable.addAnimation("walk", [0,1,3,4]);
-    this.renderable.setCurrentAnimation("walk");
-		this.type = me.game.ENEMY_OBJECT;  
-	},
-
-	update : function () {			
-
-    if (this.walkLeft && this.pos.x <= this.startX) {
-        this.walkLeft = false;
-    } else if (!this.walkLeft && this.pos.x >= this.endX) {
-        this.walkLeft = true;
-    }
-    this.flipX(this.walkLeft);
-    this.vel.x += (this.walkLeft) ? -this.accel.x * me.timer.tick : this.accel.x * me.timer.tick;
-
-    this.updateMovement();
-     
-    if (this.vel.x !=0 || this.vel.y !=0) {
-        this.parent();
-        return true;
-    }
-    return false;
-
-	}
-
-});
-*/
-
-
 game.PlayerEntity = me.ObjectEntity.extend(
 {	
   
@@ -237,21 +61,26 @@ game.PlayerEntity = me.ObjectEntity.extend(
 		var res = me.game.collide(this);
 
      if (res) {
-      
+
+       if (res.obj.type == me.game.COLLECTABLE_OBJECT) {
+            if (res.obj.score) { 
+              me.game.HUD.updateItemValue('score', res.obj.score); 
+            }  
+            if (res.obj.health) { 
+               me.game.HUD.updateItemValue('health', res.obj.health); 
+            }
+            me.audio.play(res.obj.audio);        				
+            res.obj.collidable = false;
+            me.game.remove(res.obj);
+        }
+  
       if (res.obj.type == me.game.ENEMY_OBJECT) {
         if (!this.renderable.isFlickering()) {
           this.renderable.flicker(30);
-          me.game.HUD.updateItemValue('health', -res.obj.damage);
+          me.game.HUD.updateItemValue('health', res.obj.health);
         }
       }
-            
-      if (res.obj.type == me.game.COLLECTABLE_OBJECT) {
-           me.game.HUD.updateItemValue('score', res.obj.credit);
-           me.audio.play(res.obj.audio);        				
-           res.obj.collidable = false;
-           me.game.remove(res.obj);
-      }
-     
+                 
      
      }
      
