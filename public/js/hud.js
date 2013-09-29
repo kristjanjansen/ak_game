@@ -24,7 +24,8 @@ game.HealthObject = me.HUD_Item.extend({
   
             // me.audio.play('death');
           
-            me.state.change(me.state.PLAY);      
+         //   me.state.change(me.state.PLAY);      
+            me.levelDirector.reloadLevel();
             
         }
     }
