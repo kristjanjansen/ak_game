@@ -44,7 +44,8 @@ var game = {
 		  me.input.bindKey(me.input.KEY.RIGHT, "right");
 		  me.input.bindKey(me.input.KEY.SPACE, "jump", true);
 		  me.input.bindKey(me.input.KEY.UP, "jump", true);
-
+     
       me.state.change(me.state.PLAY);
+    
     }
 };
