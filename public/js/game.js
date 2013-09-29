@@ -29,7 +29,7 @@ var game = {
       me.state.set(me.state.MENU, new game.TitleScreen());
       me.state.set(me.state.PLAY, new game.PlayScreen());
 		
-      me.state.transition("fade", "rgb(0,0,0)", 300);
+      me.state.transition("fade", "rgb(0,0,0)", 400);
 				
 		  me.entityPool.add("player", game.PlayerEntity);
 		  me.entityPool.add("bible", game.BibleEntity);
