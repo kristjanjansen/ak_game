@@ -38,7 +38,8 @@ var game = {
 		  me.entityPool.add("boss", game.BossEntity);
 		  me.entityPool.add("spikes", game.SpikesEntity);
 
-		  me.entityPool.add("card", game.CardEntity);
+		  me.entityPool.add("score", game.ScoreCardEntity);
+		  me.entityPool.add("health", game.HealthCardEntity);
 
 		  me.input.bindKey(me.input.KEY.LEFT,	"left");
 		  me.input.bindKey(me.input.KEY.RIGHT, "right");
