@@ -76,6 +76,7 @@
   <object name="score" x="1568" y="192" width="32" height="32"/>
   <object name="boss" x="2240" y="32" width="224" height="128"/>
   <object name="health" x="2496" y="32" width="32" height="32"/>
+  <object name="nextlevel" x="288" y="384" width="32" height="32"/>
  </objectgroup>
  <layer name="collision" width="80" height="15">
   <data encoding="base64">

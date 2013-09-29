@@ -35,11 +35,12 @@ rm -f public/data/images/backgrounds/*
 
 for i in $(find source/images/backgrounds -mindepth 1 -maxdepth 1 -type f)
 do
-  #  convert ${i} -filter box -resize 400%x400% ${i//source/public/data}
-    convert ${i} -filter box -resize 400%x400% +level-colors sienna3,tan1 ${i//source/public/data}
-  #  convert ${i} -filter box -resize 400%x400% +level-colors steelblue,skyblue ${i//source/public/data}
-  #  convert ${i} -filter box -resize 400%x400%  +level-colors indigo,darkorchid3 ${i//source/public/data}
+    convert ${i} -filter box -resize 400%x400% ${i//source/public/data}
 done
+
+convert public/data/images/backgrounds/background1.png +level-colors sienna3,tan1 public/data/images/backgrounds/background1.png
+convert public/data/images/backgrounds/background2.png +level-colors sienna3,tan1 public/data/images/backgrounds/background2.png
+convert public/data/images/backgrounds/background3.png +level-colors 'rgb(30,30,50)','rgb(80,80,100)' public/data/images/backgrounds/background3.png
 
 
 # Tiles

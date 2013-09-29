@@ -87,6 +87,10 @@ game.PlayerEntity = me.ObjectEntity.extend(
           }
         }
       }
+      
+      if (res.obj.type == 'nextlevel') {
+          me.levelDirector.nextLevel();
+      }
                  
      
      }

@@ -40,6 +40,8 @@ var game = {
 		  me.entityPool.add("score", game.ScoreCardEntity);
 		  me.entityPool.add("health", game.HealthCardEntity);
 
+		  me.entityPool.add("nextlevel", game.NextlevelEntity);
+
 		  me.input.bindKey(me.input.KEY.LEFT,	"left");
 		  me.input.bindKey(me.input.KEY.RIGHT, "right");
 		  me.input.bindKey(me.input.KEY.SPACE, "jump", true);

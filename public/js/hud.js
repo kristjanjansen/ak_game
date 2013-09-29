@@ -1,7 +1,7 @@
 game.ScoreObject = me.HUD_Item.extend({
     init: function(x, y) {
         this.parent(x, y);
-        this.font = new me.BitmapFont("font", {x: 32, y: 32});
+        this.font = new me.BitmapFont("font", {x: 16, y: 16});
         
     },
  
@@ -25,6 +25,7 @@ game.HealthObject = me.HUD_Item.extend({
             // me.audio.play('death');
           
             me.state.change(me.state.PLAY);      
+            
         }
     }
  
