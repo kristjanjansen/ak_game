@@ -19,6 +19,8 @@ game.resources = [
 	{name: "jump", type: "audio", src: "data/audio/effects/", channel : 2},
 	{name: "pickup1", type: "audio", src: "data/audio/effects/", channel : 3},
 	{name: "pickup2", type: "audio", src: "data/audio/effects/", channel : 3},
+//	{name: "hurt", type: "audio", src: "data/audio/effects/", channel : 1},
+//	{name: "death", type: "audio", src: "data/audio/effects/", channel : 1},
 
 	{name: "font", type: "image", src: "data/fonts/communist_rounded.png"},
 

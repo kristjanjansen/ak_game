@@ -69,7 +69,9 @@ game.PlayerEntity = me.ObjectEntity.extend(
             if (res.obj.health) { 
                me.game.HUD.updateItemValue('health', res.obj.health); 
             }
-            me.audio.play(res.obj.audio);        				
+            if (res.obj.audio) { 
+              me.audio.play(res.obj.audio);
+            }     				
             res.obj.collidable = false;
             me.game.remove(res.obj);
         }
@@ -77,7 +79,12 @@ game.PlayerEntity = me.ObjectEntity.extend(
       if (res.obj.type == me.game.ENEMY_OBJECT) {
         if (!this.renderable.isFlickering()) {
           this.renderable.flicker(30);
-          me.game.HUD.updateItemValue('health', res.obj.health);
+          if (res.obj.health) { 
+             me.game.HUD.updateItemValue('health', res.obj.health); 
+          }
+          if (res.obj.audio) { 
+            me.audio.play(res.obj.audio);
+          }
         }
       }
                  

@@ -65,6 +65,7 @@ game.SpikesEntity = game.StaticEnemyEntity.extend({
 		this.parent(x, y , settings);
  
     this.health = -100;
+//  this.audio = 'hurt'
 
 	},
 
@@ -81,6 +82,7 @@ game.ThugEntity = game.WalkingEnemyEntity.extend({
 		this.parent(x, y , settings);
 		
 		this.health = -200;
+//  this.audio = 'hurt'
     
     this.renderable.addAnimation("walk", [0,1,2]);
     this.renderable.setCurrentAnimation("walk");
@@ -97,6 +99,7 @@ game.BibleEntity = game.WalkingEnemyEntity.extend({
 		this.parent(x, y , settings);
 		
 		this.health = -200;
+//  this.audio = 'hurt'
     
     this.renderable.addAnimation("walk", [0,1]);
     this.renderable.setCurrentAnimation("walk");
@@ -113,8 +116,10 @@ game.BossEntity = game.WalkingEnemyEntity.extend({
 		this.parent(x, y , settings);
 		
 		this.health = -400;
+//  this.audio = 'hurt'
     
     this.renderable.addAnimation("walk", [0,1,2,3]);
     this.renderable.setCurrentAnimation("walk");
 	}
+	
 })

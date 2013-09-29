@@ -21,6 +21,9 @@ game.HealthObject = me.HUD_Item.extend({
         if (this.value > 0) {
           this.font.draw(context, this.value, this.pos.x + x, this.pos.y + y);
         } else {
+  
+            // me.audio.play('death');
+          
             me.state.change(me.state.PLAY);      
         }
     }
