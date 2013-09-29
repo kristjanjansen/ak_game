@@ -6,6 +6,10 @@ game.PlayScreen = me.ScreenObject.extend({
 		
 		me.game.addHUD(7, 7, 640, 32);
     me.game.HUD.addItem('score', new game.ScoreObject(0, 0));
+    me.game.HUD.addItem('health', new game.HealthObject(300, 0));
+    
+    me.game.HUD.setItemValue('score', 0);
+    me.game.HUD.setItemValue('health', 1000);
     
     me.game.sort();
     

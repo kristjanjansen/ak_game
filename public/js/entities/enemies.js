@@ -84,6 +84,22 @@ game.ThugEntity = game.WalkingEnemyEntity.extend({
 })
 
 
+game.BibleEntity = game.WalkingEnemyEntity.extend({	
+	
+	init:function (x, y, settings) {
+	  settings.image = 'bible';
+	  settings.spritewidth = 32;	
+	  settings.spriteheight = 64;	
+		this.parent(x, y , settings);
+		
+		this.damage = 200;
+    
+    this.renderable.addAnimation("walk", [0,1]);
+    this.renderable.setCurrentAnimation("walk");
+	}
+})
+
+
 game.BossEntity = game.WalkingEnemyEntity.extend({	
 	
 	init:function (x, y, settings) {

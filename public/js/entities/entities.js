@@ -15,7 +15,7 @@ game.SpikesEntity = me.ObjectEntity.extend({
 });
 */
 
-
+/*
 game.CardEntity = me.CollectableEntity.extend({
    
     init: function(x, y, settings) {
@@ -39,7 +39,8 @@ game.CardEntity = me.CollectableEntity.extend({
     }
  
 });
-
+*/
+/*
 game.BibleEntity = me.ObjectEntity.extend({	
 	
 	init:function (x, y, settings) {
@@ -82,7 +83,7 @@ game.BibleEntity = me.ObjectEntity.extend({
 	}
 
 });
-
+*/
 /*
 game.ThugEntity = me.ObjectEntity.extend({	
 	
@@ -238,15 +239,19 @@ game.PlayerEntity = me.ObjectEntity.extend(
      if (res) {
       
       if (res.obj.type == me.game.ENEMY_OBJECT) {
-        //res.obj.renderable.flicker(45);
-        this.renderable.flicker(30);
+        if (!this.renderable.isFlickering()) {
+          this.renderable.flicker(30);
+          me.game.HUD.updateItemValue('health', -res.obj.damage);
+        }
       }
             
       if (res.obj.type == me.game.COLLECTABLE_OBJECT) {
-         me.game.HUD.updateItemValue('score', res.obj.bonus);
+           me.game.HUD.updateItemValue('score', res.obj.credit);
+           me.audio.play(res.obj.audio);        				
+           res.obj.collidable = false;
+           me.game.remove(res.obj);
       }
      
-      
      
      }
      
@@ -269,6 +274,22 @@ game.ScoreObject = me.HUD_Item.extend({
  
     draw: function(context, x, y) {
         this.font.draw(context, this.value, this.pos.x + x, this.pos.y + y);
+    }
+ 
+});
+
+game.HealthObject = me.HUD_Item.extend({
+    init: function(x, y) {
+        this.parent(x, y);
+        this.font = new me.BitmapFont("font", {x: 32, y: 32});
+    },
+ 
+    draw: function(context, x, y) {
+        if (this.value >= 0) {
+          this.font.draw(context, this.value, this.pos.x + x, this.pos.y + y);
+        } else {
+          console.log('bah')
+        }
     }
  
 });
