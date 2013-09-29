@@ -127,7 +127,7 @@ game.ThugEntity = me.ObjectEntity.extend({
 
 });
 */
-
+/*
 game.BossEntity = me.ObjectEntity.extend({	
 	
 	init:function (x, y, settings) {
@@ -170,7 +170,7 @@ game.BossEntity = me.ObjectEntity.extend({
 	}
 
 });
-
+*/
 
 
 game.PlayerEntity = me.ObjectEntity.extend(
@@ -240,7 +240,6 @@ game.PlayerEntity = me.ObjectEntity.extend(
       if (res.obj.type == me.game.ENEMY_OBJECT) {
         //res.obj.renderable.flicker(45);
         this.renderable.flicker(30);
-        console.log('hurt', res.obj.hurt)
       }
             
       if (res.obj.type == me.game.COLLECTABLE_OBJECT) {

@@ -60,7 +60,7 @@ game.SpikesEntity = game.StaticEnemyEntity.extend({
 
 		this.parent(x, y , settings);
  
-    this.hurt = 100;
+    this.damage = 100;
 
 	},
 
@@ -76,9 +76,25 @@ game.ThugEntity = game.WalkingEnemyEntity.extend({
 	  settings.spriteheight = 64;	
 		this.parent(x, y , settings);
 		
-		this.hurt = 200;
+		this.damage = 200;
     
     this.renderable.addAnimation("walk", [0,1,2]);
+    this.renderable.setCurrentAnimation("walk");
+	}
+})
+
+
+game.BossEntity = game.WalkingEnemyEntity.extend({	
+	
+	init:function (x, y, settings) {
+	  settings.image = 'boss';
+	  settings.spritewidth = 128;	
+	  settings.spriteheight = 128;	
+		this.parent(x, y , settings);
+		
+		this.damage = 400;
+    
+    this.renderable.addAnimation("walk", [0,1,2,3]);
     this.renderable.setCurrentAnimation("walk");
 	}
 })
