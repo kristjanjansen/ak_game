@@ -69,4 +69,4 @@ do
 #  rm ${i//source/public/data}-*.png
 done
 
-echo "Local build completed"
+echo "Build completed"

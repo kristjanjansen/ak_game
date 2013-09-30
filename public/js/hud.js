@@ -1,7 +1,7 @@
 game.ScoreObject = me.HUD_Item.extend({
     init: function(x, y) {
         this.parent(x, y);
-        this.font = new me.BitmapFont("font", {x: 16, y: 16});
+        this.font = new me.BitmapFont("font", {x: 32, y: 32});
         
     },
  
