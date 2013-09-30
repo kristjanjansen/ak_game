@@ -99,13 +99,9 @@ game.PlayerEntity = me.ObjectEntity.extend(
       }
       
       if (res.obj.type == 'nextlevel') {
-          me.state.change(me.state.PLAY, 'level2');
+          me.state.change(me.state.PLAY, res.obj.levelid);
       }
 
-      if (res.obj.type == 'nextlevel2') {
-          me.state.change(me.state.PLAY, 'level3');
-      }
-                 
      
      }
      

@@ -6,9 +6,10 @@ game.NextlevelEntity = me.ObjectEntity.extend(
 	{
 	  settings.spritewidth = 32;	
 	  settings.spriteheight = 32;
-	  
 		this.parent(x, y , settings);
+
     this.type = 'nextlevel'
+    this.levelid = settings.levelid
 
 	},
 
@@ -20,24 +21,3 @@ game.NextlevelEntity = me.ObjectEntity.extend(
 });
 
 
-
-game.Nextlevel2Entity = me.ObjectEntity.extend(
-{	
-  
-	
-	init:function (x, y, settings)
-	{
-	  settings.spritewidth = 32;	
-	  settings.spriteheight = 32;
-	  
-		this.parent(x, y , settings);
-    this.type = 'nextlevel2'
-
-	},
-
-	update : function ()
-	{
-		return false;
-	}
-
-});

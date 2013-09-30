@@ -48,7 +48,6 @@ var game = {
 		  me.entityPool.add("megapack", game.MegapackEntity);
 
 		  me.entityPool.add("nextlevel", game.NextlevelEntity);
-		  me.entityPool.add("nextlevel2", game.Nextlevel2Entity);
 
 		  me.input.bindKey(me.input.KEY.LEFT,	"left");
 		  me.input.bindKey(me.input.KEY.RIGHT, "right");
