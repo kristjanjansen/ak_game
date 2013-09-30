@@ -72,7 +72,7 @@ game.LiquidEntity = game.WalkingEnemyEntity.extend({
     this.renderable.setCurrentAnimation("walk");
     this.health = -50;
     
-//  this.audio = 'hurt'
+  this.audio = 'fire'
 
 	},
 	
@@ -114,7 +114,7 @@ game.ThugEntity = game.WalkingEnemyEntity.extend({
 		this.parent(x, y , settings);
 		
 		this.health = -100;
-//  this.audio = 'hurt'
+   this.audio = 'damage'
     
     this.renderable.addAnimation("walk", [0,1,2]);
     this.renderable.setCurrentAnimation("walk");
@@ -130,7 +130,7 @@ game.Thug2Entity = game.WalkingEnemyEntity.extend({
 		this.parent(x, y , settings);
 		
 		this.health = -100;
-//  this.audio = 'hurt'
+    this.audio = 'damage'
     
     this.renderable.addAnimation("walk", [0,1,2]);
     this.renderable.setCurrentAnimation("walk");
@@ -146,7 +146,7 @@ game.BibleEntity = game.WalkingEnemyEntity.extend({
 		this.parent(x, y , settings);
 		
 		this.health = -150;
-//  this.audio = 'hurt'
+    this.audio = 'damage'
     
     this.renderable.addAnimation("walk", [0,1]);
     this.renderable.setCurrentAnimation("walk");
@@ -163,7 +163,7 @@ game.BossEntity = game.WalkingEnemyEntity.extend({
 		this.parent(x, y , settings);
 		
 		this.health = -250;
-//  this.audio = 'hurt'
+    this.audio = 'damage'
     
     this.renderable.addAnimation("walk", [0,1,2,3]);
     this.renderable.setCurrentAnimation("walk");
@@ -181,7 +181,7 @@ game.BishopEntity = game.WalkingEnemyEntity.extend({
 		this.parent(x, y , settings);
 		
 		this.health = -300;
-//  this.audio = 'hurt'
+    this.audio = 'damage'
     
     this.renderable.addAnimation("walk", [0,1,2,3]);
     this.renderable.setCurrentAnimation("walk");

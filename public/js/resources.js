@@ -31,6 +31,8 @@ game.resources = [
 	{name: "pickup1", type: "audio", src: "data/audio/effects/", channel : 3},
 	{name: "pickup2", type: "audio", src: "data/audio/effects/", channel : 3},
 	{name: "pickup3", type: "audio", src: "data/audio/effects/", channel : 3},
+	{name: "damage", type: "audio", src: "data/audio/effects/", channel : 3},
+	{name: "fire", type: "audio", src: "data/audio/effects/", channel : 3},
 
 //	{name: "hurt", type: "audio", src: "data/audio/effects/", channel : 1},
 //	{name: "death", type: "audio", src: "data/audio/effects/", channel : 1},
