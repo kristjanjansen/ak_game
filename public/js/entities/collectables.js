@@ -27,7 +27,7 @@ game.Score2CardEntity = me.CollectableEntity.extend({
       this.renderable.addAnimation("idle", [16,17]);
       this.renderable.setCurrentAnimation("idle");
       
-      this.score = 200;
+      this.score = 150;
       this.audio = 'pickup2';
     },
  
@@ -61,8 +61,26 @@ game.HealthCardEntity = me.CollectableEntity.extend({
       this.renderable.addAnimation("idle", [0,1]);
       this.renderable.setCurrentAnimation("idle");
       
-      this.score = 100;
-      this.health = 100;
+      this.score = 50;
+      this.health = 200;
+      this.audio = 'pickup2';
+    },
+ 
+});
+
+game.MegapackEntity = me.CollectableEntity.extend({
+   
+    init: function(x, y, settings) {
+  	  settings.image = 'megapack';
+  	  settings.spritewidth = 64;	
+  	  settings.spriteheight = 64;
+  	  
+      this.parent(x, y, settings);
+      this.renderable.addAnimation("idle", [0,1]);
+      this.renderable.setCurrentAnimation("idle");
+      
+      this.score = 200;
+      this.health = 500;
       this.audio = 'pickup2';
     },
  

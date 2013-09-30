@@ -34,7 +34,9 @@ var game = {
 		  me.entityPool.add("player", game.PlayerEntity);
 		  me.entityPool.add("bible", game.BibleEntity);
 		  me.entityPool.add("thug", game.ThugEntity);
+		  me.entityPool.add("thug2", game.Thug2Entity);
 		  me.entityPool.add("boss", game.BossEntity);
+		  me.entityPool.add("bishop", game.BishopEntity);
 	//	  me.entityPool.add("spikes", game.SpikesEntity);
 		  me.entityPool.add("liquid", game.LiquidEntity);
 
@@ -43,6 +45,7 @@ var game = {
 		  me.entityPool.add("score3", game.Score3CardEntity);
 		  
 		  me.entityPool.add("health", game.HealthCardEntity);
+		  me.entityPool.add("megapack", game.MegapackEntity);
 
 		  me.entityPool.add("nextlevel", game.NextlevelEntity);
 

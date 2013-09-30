@@ -6,12 +6,15 @@ game.resources = [
 	{name: "emo", type:"image",	src: "data/images/sprites/emo.png"},
 	{name: "bible", type:"image",	src: "data/images/sprites/bible.png"},
 	{name: "thug", type:"image",	src: "data/images/sprites/thug.png"},
+	{name: "thug2", type:"image",	src: "data/images/sprites/thug2.png"},
 	{name: "boss", type:"image",	src: "data/images/sprites/boss.png"},
+	{name: "bishop", type:"image",	src: "data/images/sprites/bishop.png"},
 
 	{name: "liquid", type:"image",	src: "data/images/sprites/liquid.png"},
 
 	{name: "card", type:"image",	src: "data/images/sprites/card.png"},
 	{name: "healthpack", type:"image",	src: "data/images/sprites/healthpack.png"},
+	{name: "megapack", type:"image",	src: "data/images/sprites/megapack.png"},
 
 	{name: "background1", type:"image",	src: "data/images/backgrounds/background1.png"},
 	{name: "background2", type:"image",	src: "data/images/backgrounds/background2.png"},

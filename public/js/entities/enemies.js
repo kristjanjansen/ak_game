@@ -111,7 +111,7 @@ game.ThugEntity = game.WalkingEnemyEntity.extend({
 	  settings.spriteheight = 64;	
 		this.parent(x, y , settings);
 		
-		this.health = -200;
+		this.health = -100;
 //  this.audio = 'hurt'
     
     this.renderable.addAnimation("walk", [0,1,2]);
@@ -119,6 +119,21 @@ game.ThugEntity = game.WalkingEnemyEntity.extend({
 	}
 })
 
+game.Thug2Entity = game.WalkingEnemyEntity.extend({	
+	
+	init:function (x, y, settings) {
+	  settings.image = 'thug2';
+	  settings.spritewidth = 64;	
+	  settings.spriteheight = 64;	
+		this.parent(x, y , settings);
+		
+		this.health = -100;
+//  this.audio = 'hurt'
+    
+    this.renderable.addAnimation("walk", [0,1,2]);
+    this.renderable.setCurrentAnimation("walk");
+	}
+})
 
 game.BibleEntity = game.WalkingEnemyEntity.extend({	
 	
@@ -128,7 +143,7 @@ game.BibleEntity = game.WalkingEnemyEntity.extend({
 	  settings.spriteheight = 64;	
 		this.parent(x, y , settings);
 		
-		this.health = -200;
+		this.health = -150;
 //  this.audio = 'hurt'
     
     this.renderable.addAnimation("walk", [0,1]);
@@ -145,7 +160,25 @@ game.BossEntity = game.WalkingEnemyEntity.extend({
 	  settings.spriteheight = 128;	
 		this.parent(x, y , settings);
 		
-		this.health = -400;
+		this.health = -250;
+//  this.audio = 'hurt'
+    
+    this.renderable.addAnimation("walk", [0,1,2,3]);
+    this.renderable.setCurrentAnimation("walk");
+	}
+	
+})
+
+
+game.BishopEntity = game.WalkingEnemyEntity.extend({	
+	
+	init:function (x, y, settings) {
+	  settings.image = 'bishop';
+	  settings.spritewidth = 128;	
+	  settings.spriteheight = 128;	
+		this.parent(x, y , settings);
+		
+		this.health = -300;
 //  this.audio = 'hurt'
     
     this.renderable.addAnimation("walk", [0,1,2,3]);
