@@ -10,7 +10,7 @@ game.ScoreCardEntity = me.CollectableEntity.extend({
       this.renderable.setCurrentAnimation("idle");
       
       this.score = 100;
-      this.audio = 'pickup2';
+      this.audio = 'pickup1';
     },
  
 });
@@ -45,7 +45,7 @@ game.Score3CardEntity = me.CollectableEntity.extend({
       this.renderable.setCurrentAnimation("idle");
       
       this.score = 200;
-      this.audio = 'pickup2';
+      this.audio = 'pickup3';
     },
  
 });
@@ -81,7 +81,7 @@ game.MegapackEntity = me.CollectableEntity.extend({
       
       this.score = 200;
       this.health = 500;
-      this.audio = 'pickup2';
+      this.audio = 'pickup3';
     },
  
 });

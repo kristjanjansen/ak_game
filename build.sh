@@ -27,3 +27,5 @@ cp /Volumes/Disain\'s\ Public\ Folder/MK-11/projektid/game/source/fonts/*.png so
 
 cp public/data/images/tiles/*.png /Volumes/Disain\'s\ Public\ Folder/MK-11/projektid/game/source/images/tiles/.
 
+cp -R /Volumes/Disain\'s\ Public\ Folder/MK-11/projektid/game/source/audio/effects/*.mp3 source/audio/effects/.
+cp -R /Volumes/Disain\'s\ Public\ Folder/MK-11/projektid/game/source/audio/music/*.mp3 source/audio/music/.

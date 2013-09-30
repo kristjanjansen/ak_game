@@ -55,7 +55,7 @@ var game = {
 		  me.input.bindKey(me.input.KEY.DOWN, "down");
 		  me.input.bindKey(me.input.KEY.SPACE, "jump", true);
      
-      me.state.change(me.state.PLAY);
+      me.state.change(me.state.PLAY, 'level1');
     
     }
 };

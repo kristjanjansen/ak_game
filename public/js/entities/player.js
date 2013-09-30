@@ -54,9 +54,9 @@ game.PlayerEntity = me.ObjectEntity.extend(
 			this.vel.x = 0;
 		}
 		
-		if (me.input.isKeyPressed('jump'))
+		if (me.input.isKeyPressed('jump') || me.input.isKeyPressed('up'))
 		{	
-			if (!this.jumping && !this.falling) 
+			if (!this.jumping && !this.falling && !this.onLadder) 
 			{
 				this.vel.y = -this.maxVel.y * me.timer.tick;
 				this.jumping = true;
@@ -99,6 +99,8 @@ game.PlayerEntity = me.ObjectEntity.extend(
       }
       
       if (res.obj.type == 'nextlevel') {
+          me.state.change(me.state.PLAY, me.levelDirector.getCurrentLevelId());
+          //console.log();
           me.levelDirector.nextLevel();
       }
                  
