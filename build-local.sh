@@ -24,6 +24,8 @@ do
 
 done
 
+convert public/data/images/sprites/liquid.png -background None -channel Alpha -evaluate Divide 2 public/data/images/sprites/liquid.png
+
 
 # Background images
 

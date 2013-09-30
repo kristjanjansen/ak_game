@@ -6,7 +6,7 @@ game.ScoreObject = me.HUD_Item.extend({
     },
  
     draw: function(context, x, y) {
-        this.font.draw(context, this.value, this.pos.x + x, this.pos.y + y);
+        this.font.draw(context, ';' + this.value, this.pos.x + x, this.pos.y + y);
     }
  
 });
@@ -19,13 +19,13 @@ game.HealthObject = me.HUD_Item.extend({
  
     draw: function(context, x, y) {
         if (this.value > 0) {
-          this.font.draw(context, this.value, this.pos.x + x, this.pos.y + y);
+          this.font.draw(context, ':' + this.value, this.pos.x + x, this.pos.y + y);
         } else {
   
             // me.audio.play('death');
           
-         //   me.state.change(me.state.PLAY);      
-            me.levelDirector.reloadLevel();
+            me.state.change(me.state.PLAY);      
+         //   me.levelDirector.reloadLevel();
             
         }
     }

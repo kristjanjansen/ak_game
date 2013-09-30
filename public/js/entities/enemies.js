@@ -57,6 +57,35 @@ game.WalkingEnemyEntity = me.ObjectEntity.extend({
 
 // Enemy classes
 
+game.LiquidEntity = game.WalkingEnemyEntity.extend({	
+	
+	init:function (x, y, settings) {
+
+	  settings.image = 'liquid';
+	  settings.spritewidth = 64;	
+	  settings.spriteheight = 32;
+		this.parent(x, y , settings);
+  
+    this.renderable.addAnimation("walk", [0,1,2,3]);
+    this.renderable.setCurrentAnimation("walk");
+    
+    this.health = -50;
+    
+//  this.audio = 'hurt'
+
+	},
+	
+	update : function () {			
+
+    this.updateMovement();
+    this.parent();
+    return true;
+
+	}
+	
+
+});
+
 
 game.SpikesEntity = game.StaticEnemyEntity.extend({	
 	
@@ -66,6 +95,7 @@ game.SpikesEntity = game.StaticEnemyEntity.extend({
  
     this.health = -100;
 //  this.audio = 'hurt'
+
 
 	},
 

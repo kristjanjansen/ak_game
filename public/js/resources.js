@@ -8,7 +8,10 @@ game.resources = [
 	{name: "thug", type:"image",	src: "data/images/sprites/thug.png"},
 	{name: "boss", type:"image",	src: "data/images/sprites/boss.png"},
 
+	{name: "liquid", type:"image",	src: "data/images/sprites/liquid.png"},
+
 	{name: "card", type:"image",	src: "data/images/sprites/card.png"},
+	{name: "healthpack", type:"image",	src: "data/images/sprites/healthpack.png"},
 
 	{name: "background1", type:"image",	src: "data/images/backgrounds/background1.png"},
 	{name: "background2", type:"image",	src: "data/images/backgrounds/background2.png"},
