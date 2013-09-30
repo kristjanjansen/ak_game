@@ -22,6 +22,7 @@ game.resources = [
 	
 	{name: "level1",  type: "tmx",	src: "data/levels/level1.tmx"},
 	{name: "level2",  type: "tmx",	src: "data/levels/level2.tmx"},
+	{name: "level3",  type: "tmx",	src: "data/levels/level3.tmx"},
 	
 	{name: "level1", type: "audio", src: "data/audio/music/", channel : 1},	
 	{name: "jump", type: "audio", src: "data/audio/effects/", channel : 2},

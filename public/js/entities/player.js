@@ -31,14 +31,24 @@ game.PlayerEntity = me.ObjectEntity.extend(
 			
 		if (me.input.isKeyPressed('left'))
 		{
-			this.flipX(true);
-			this.vel.x -= this.accel.x * me.timer.tick;
+		  this.doWalk(true)  
+//			this.flipX(true);
+//			this.vel.x -= this.accel.x * me.timer.tick;
 		}
 		else if (me.input.isKeyPressed('right'))
 		{
-			this.flipX(false);
-			this.vel.x += this.accel.x * me.timer.tick;
+      this.doWalk(false)  
+//			this.flipX(false);
+//			this.vel.x += this.accel.x * me.timer.tick;
 		}
+    else if (me.input.isKeyPressed('up'))
+    {
+      this.doClimb(true)  
+    }
+    else if (me.input.isKeyPressed('down'))
+    {
+      this.doClimb(false)  
+    }
 		else
 		{
 			this.vel.x = 0;

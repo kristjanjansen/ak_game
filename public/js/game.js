@@ -51,8 +51,9 @@ var game = {
 
 		  me.input.bindKey(me.input.KEY.LEFT,	"left");
 		  me.input.bindKey(me.input.KEY.RIGHT, "right");
+		  me.input.bindKey(me.input.KEY.UP, "up");
+		  me.input.bindKey(me.input.KEY.DOWN, "down");
 		  me.input.bindKey(me.input.KEY.SPACE, "jump", true);
-		  me.input.bindKey(me.input.KEY.UP, "jump", true);
      
       me.state.change(me.state.PLAY);
     

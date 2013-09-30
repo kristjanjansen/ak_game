@@ -66,9 +66,10 @@ game.LiquidEntity = game.WalkingEnemyEntity.extend({
 	  settings.spriteheight = 32;
 		this.parent(x, y , settings);
   
+  	this.setVelocity(0, 0);
+	
     this.renderable.addAnimation("walk", [0,1,2,3]);
     this.renderable.setCurrentAnimation("walk");
-    
     this.health = -50;
     
 //  this.audio = 'hurt'
@@ -79,6 +80,7 @@ game.LiquidEntity = game.WalkingEnemyEntity.extend({
 
     this.updateMovement();
     this.parent();
+    
     return true;
 
 	}
