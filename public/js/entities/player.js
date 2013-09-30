@@ -99,9 +99,11 @@ game.PlayerEntity = me.ObjectEntity.extend(
       }
       
       if (res.obj.type == 'nextlevel') {
-          me.state.change(me.state.PLAY, me.levelDirector.getCurrentLevelId());
-          //console.log();
-          me.levelDirector.nextLevel();
+          me.state.change(me.state.PLAY, 'level2');
+      }
+
+      if (res.obj.type == 'nextlevel2') {
+          me.state.change(me.state.PLAY, 'level3');
       }
                  
      

@@ -101,7 +101,7 @@
   <object name="thug2" x="256" y="224" width="256" height="64"/>
   <object name="nextlevel" x="2688" y="0" width="32" height="32"/>
   <object name="nextlevel" x="2688" y="224" width="32" height="32"/>
-  <object name="nextlevel" x="64" y="224" width="32" height="32"/>
+  <object name="nextlevel2" x="64" y="224" width="32" height="32"/>
  </objectgroup>
  <layer name="collision" width="85" height="15">
   <data encoding="base64">
