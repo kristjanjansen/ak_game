@@ -50,6 +50,8 @@ do
   convert $i/*.png -background None -append -filter box -resize 400%x400% ${i//source/public/data}.png
 done
 
+convert public/data/images/tiles/tiles.png +level-colors 'rgb(50,50,50)','rgb(100,100,100)' public/data/images/tiles/tiles.png
+
 
 # Sounds
 
