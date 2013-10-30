@@ -13,7 +13,7 @@ var game = {
 			});
 		}
 
-        me.audio.init("mp3");
+//        me.audio.init("mp3");
         
         me.loader.onload = this.loaded.bind(this);
      

@@ -60,7 +60,7 @@ game.PlayerEntity = me.ObjectEntity.extend(
 			{
 				this.vel.y = -this.maxVel.y * me.timer.tick;
 				this.jumping = true;
-				me.audio.play("jump");        
+//				me.audio.play("jump");        
   			this.renderable.setCurrentAnimation("jump", "walk");
 			}
 		}
@@ -80,7 +80,7 @@ game.PlayerEntity = me.ObjectEntity.extend(
                me.game.HUD.updateItemValue('health', res.obj.health); 
             }
             if (res.obj.audio) { 
-              me.audio.play(res.obj.audio);
+//              me.audio.play(res.obj.audio);
             }     				
             res.obj.collidable = false;
             me.game.remove(res.obj);
@@ -93,7 +93,7 @@ game.PlayerEntity = me.ObjectEntity.extend(
              me.game.HUD.updateItemValue('health', res.obj.health); 
           }
           if (res.obj.audio) { 
-            me.audio.play(res.obj.audio);
+//            me.audio.play(res.obj.audio);
           }
         }
       }

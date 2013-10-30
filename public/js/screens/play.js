@@ -14,7 +14,7 @@ game.PlayScreen = me.ScreenObject.extend({
     me.game.sort();
       
     
-		me.audio.playTrack(level);	
+//		me.audio.playTrack(level);	
 		
 //			console.log(me.levelDirector.getCurrentLevelId());
 	},
@@ -23,7 +23,7 @@ game.PlayScreen = me.ScreenObject.extend({
 	
 	  me.game.disableHUD();
     
-	  me.audio.stopTrack();
+//	  me.audio.stopTrack();
 	
 	}
 	
