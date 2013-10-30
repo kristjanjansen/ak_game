@@ -23,7 +23,7 @@ game.resources = [
 	{name: "level1",  type: "tmx",	src: "data/levels/level1.tmx"},
 	{name: "level2",  type: "tmx",	src: "data/levels/level2.tmx"},
 	{name: "level3",  type: "tmx",	src: "data/levels/level3.tmx"},
-	
+/*	
 	{name: "level1", type: "audio", src: "data/audio/music/", channel : 1},	
 	{name: "level2", type: "audio", src: "data/audio/music/", channel : 1},	
 	{name: "level3", type: "audio", src: "data/audio/music/", channel : 1},	
@@ -33,7 +33,7 @@ game.resources = [
 	{name: "pickup3", type: "audio", src: "data/audio/effects/", channel : 3},
 	{name: "damage", type: "audio", src: "data/audio/effects/", channel : 3},
 	{name: "fire", type: "audio", src: "data/audio/effects/", channel : 3},
-
+*/
 //	{name: "hurt", type: "audio", src: "data/audio/effects/", channel : 1},
 //	{name: "death", type: "audio", src: "data/audio/effects/", channel : 1},
 
